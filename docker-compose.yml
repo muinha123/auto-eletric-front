@@ -1,0 +1,15 @@
+version: '3'
+
+networks:
+  default:
+    name: auto-eletric-network
+
+services:
+  vue: 
+    build: ./
+    ports:
+      - "8080:8080"
+    container_name: auto_eletric_front
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
