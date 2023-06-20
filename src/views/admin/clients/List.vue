@@ -103,15 +103,24 @@
 
 <script>
 import Form from "./form/Form";
+import { Modal } from 'bootstrap';
 
 export default {
     name: "ListClients",
+    mounted () {
+        this.myModal = new Modal(document.getElementById('exampleModal'));
+    },
+    data () {
+        return {
+            myModal: {}
+        }
+    },
     components: {
         Form
     },
     methods: {
         showModal: function () {
-            this.$refs['modalClient'].openModal();
+            this.myModal.show();
         }
     }
 }
