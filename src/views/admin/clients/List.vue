@@ -108,7 +108,7 @@ import { Modal } from 'bootstrap';
 export default {
     name: "ListClients",
     mounted () {
-        this.myModal = new Modal(document.getElementById('exampleModal'));
+        this.myModal = new Modal(document.getElementById('formClients'));
     },
     data () {
         return {
